@@ -1,0 +1,17 @@
+# Device type detection
+
+Device-type detection (`mobile` / `tablet` / `desktop`) split into two small, single-job pieces: a service that owns the actual `matchMedia` setup — created once, shared across the whole app, and the only thing that ever writes a new device type — and a Pinia store that just holds the current value and hands it to the rest of the app as three plain booleans, `isMobile` / `isTablet` / `isDesktop`, instead of every component running its own media-query check. By design, only the service ever calls the store's `set()`; every other consumer just reads.
+
+## How it works
+
+Three `MediaQueryList` objects (one per breakpoint range) are created once via `window.matchMedia(...)` and cached in a module-level `mediaQueries` variable — not per-component, so every component sharing this service shares the same three listeners instead of each creating its own. Each `MediaQueryList` gets a `change` listener that re-evaluates which one currently `.matches` and writes the result into the Pinia store (`deviceTypeStore.set(type)`). The store is the reactive sink: components read `isMobile`/`isTablet`/`isDesktop` off the store, not off `deviceTypeService` directly, which is what makes changes reactive in templates. The store returns `set` alongside those getters, too, so nothing in the type system actually stops a component from calling `deviceTypeStore.set(...)` directly and bypassing the service entirely — by convention only the service ever does, since it's the only thing that knows when a breakpoint actually changed, but that boundary isn't enforced anywhere.
+
+None of this runs on its own — `deviceTypeService.init()` has to be called once, during app bootstrap, before anything reads the store. `ensureInitialized()` enforces that on the service side: it throws immediately if `init()` hasn't run yet, rather than silently falling back to some default device type, which is a deliberate fail-fast choice — a component that quietly treated "not yet initialized" as, say, `desktop` could hide a real bootstrapping bug (init running after the component that needs the store) for a long time, surfacing only as "the mobile layout doesn't show up on my phone" days later. The store side has no equivalent guard, though: `deviceType` just starts at `null`, so if `init()` genuinely never runs, `isMobile`/`isTablet`/`isDesktop` all silently read `false` forever instead of throwing — the loud failure only happens if something tries to use `deviceTypeService` directly before init, not if a component only ever reads the store.
+
+## Files
+
+`device.ts` defines the `DEVICE_TYPES` constant and the `DeviceType` type derived from it — the shared vocabulary both other files import, kept in its own file so the service and the store agree on it by import rather than by convention. `device-type.store.ts` owns the reactive sink: a `ref` behind the three computed booleans and the one `set` that mutates it, with no `matchMedia` or lifecycle logic of its own. `device-type.service.ts` owns everything the store doesn't — creating and caching the `MediaQueryList`s, wiring their `change` listeners, and the `ensureInitialized`/`init` lifecycle that decides when the store is allowed to be trusted.
+
+## How this relates to other entries
+
+- [`application-init`](../application-init) — responsible for actually calling `deviceTypeService.init()`: before the app mounts, its service-auto-init step calls `init()` on every `*.service.ts` module in the app, this one included, which is what actually turns this entry on.
