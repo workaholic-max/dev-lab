@@ -45,4 +45,5 @@ A service opts in purely by being named `*.service.ts` and exporting something w
 ## How this relates to other entries
 
 - [`device-type-detection`](../device-type-detection) — `deviceTypeService.init()` is exactly the kind of step the service auto-init convention picks up automatically; that entry doesn't call its own `init()`, since it's meant to be invoked by whatever init mechanism a consuming project already has, and this is the one it was actually pulled from.
+- [`pull-to-refresh`](../pull-to-refresh) — the second entry that convention actually picks up: its `init()` decides for itself, internally, whether it applies this session, the same as `device-type-detection`'s does.
 - [`router-init`](../router-init) — this entry's router step imports `initRouter` from there directly; `router-init` owns the implementation, this entry only owns the call.

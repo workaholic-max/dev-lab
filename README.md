@@ -11,7 +11,7 @@ A public record of the code worth keeping and the practices behind it — not a 
 ## Current entries in `code/`
 
 | Entry                                                                     | What it covers                                                                                                                                        |
-| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [`app-reload`](code/app-reload)                                           | A full-screen loading overlay shown before the page reloads or redirects, instead of the page tearing down instantly with no warning                  |
 | [`application-init`](code/application-init)                               | A single ordered entry point for an app's one-time boot setup, instead of scattering it ad hoc across whichever file happens to run first             |
 | [`axios-api-client`](code/axios-api-client)                               | A single, typed wrapper around one `axios` instance, instead of importing `axios` directly all over the codebase                                      |
@@ -28,6 +28,7 @@ A public record of the code worth keeping and the practices behind it — not a 
 | [`last-visited-route`](code/last-visited-route)                           | Remembers the route a user was last on and restores it on the app's next load, instead of always landing on the default route                         |
 | [`local-storage-service`](code/local-storage-service)                     | A thin, typed wrapper around `localStorage` that handles JSON serialization and key namespacing once, instead of every call site hand-rolling its own |
 | [`modal-system`](code/modal-system)                                       | Two primitives every modal in the app is built from, instead of each modal reimplementing its own lifecycle handling                                  |
+| [`progressive-web-app`](code/progressive-web-app)                         | A `vite-plugin-pwa` setup that makes the build installable and offline-capable, instead of hand-authoring a manifest and service worker               |
 | [`pull-to-refresh`](code/pull-to-refresh)                                 | A hand-rolled pull-to-refresh gesture for standalone-mode iOS PWAs, which lose the native one                                                         |
 | [`resolved-route-meta`](code/resolved-route-meta)                         | A cached way to read another route's `meta` (its title, for instance) by name                                                                         |
 | [`router-guards`](code/router-guards)                                     | A way to guard each route before navigating to it                                                                                                     |
