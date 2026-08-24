@@ -12,7 +12,7 @@ interface ResolvedGroupOption extends GroupOption {
 }
 
 // ───────────────────────────────────────────────────────
-// Props
+// Component API
 // ───────────────────────────────────────────────────────
 
 const {

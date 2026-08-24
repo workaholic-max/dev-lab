@@ -8,21 +8,22 @@ The Claude Code toolkit I actually use — skills for situations that come up re
 
 Each folder under `skills/` is a self-contained workflow Claude Code can run automatically or via `/<name>`:
 
-| Skill | Covers |
-|---|---|
-| `accessibility-audit` | Keyboard, screen-reader, contrast, and focus review with concrete fixes |
-| `api-integration` | Wiring a new backend endpoint with proper loading/error/success handling |
-| `debug-runtime-issue` | Reproduce and fix a bug from real evidence, not guesses |
-| `dependency-audit` | Vulnerability audit with safe fixes applied, risky bumps flagged not auto-applied, verified functionally and visually |
-| `fix-typescript-errors` | Systematic type-error resolution, no silent `any`/`ts-ignore` |
-| `implement-design` | Design/screenshot/Figma → component, verified with a browser screenshot diff |
-| `integrate-library` | Adding a third-party package (e.g. chart.js) following existing wrapper conventions |
-| `migrate-codebase` | Scoped, verified batch migrations (Vuex→Pinia, Options→Composition, etc.) |
-| `performance-audit` | Measured before/after performance fixes, not vibes |
-| `pre-pr-review` | Adversarial, fresh-context review of your own diff before opening a PR |
-| `refactor-component` | Restructure code with a safety net, preserving behavior exactly |
-| `spec-from-idea` | Turn a vague feature idea into a written spec before any code exists |
-| `write-tests` | Coverage that tests behavior, matched to the project's existing test conventions |
+| Skill                   | Covers                                                                                                                |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `accessibility-audit`   | Keyboard, screen-reader, contrast, and focus review with concrete fixes                                               |
+| `api-integration`       | Wiring a new backend endpoint with proper loading/error/success handling                                              |
+| `debug-runtime-issue`   | Reproduce and fix a bug from real evidence, not guesses                                                               |
+| `dependency-audit`      | Vulnerability audit with safe fixes applied, risky bumps flagged not auto-applied, verified functionally and visually |
+| `fix-typescript-errors` | Systematic type-error resolution, no silent `any`/`ts-ignore`                                                         |
+| `implement-design`      | Design/screenshot/Figma → component, verified with a browser screenshot diff                                          |
+| `integrate-library`     | Adding a third-party package (e.g. chart.js) following existing wrapper conventions                                   |
+| `migrate-codebase`      | Scoped, verified batch migrations (Vuex→Pinia, Options→Composition, etc.)                                             |
+| `performance-audit`     | Measured before/after performance fixes, not vibes                                                                    |
+| `pre-pr-review`         | Adversarial, fresh-context review of your own diff before opening a PR                                                |
+| `refactor-component`    | Restructure code with a safety net, preserving behavior exactly                                                       |
+| `spec-from-idea`        | Turn a vague feature idea into a written spec before any code exists                                                  |
+| `web-vitals`            | Production Core Web Vitals RUM, attribution, metric-specific diagnosis, fixes, and rollout verification               |
+| `write-tests`           | Coverage that tests behavior, matched to the project's existing test conventions                                      |
 
 Not built yet, on the list: onboarding into an unfamiliar codebase, and turning finished code into documentation.
 

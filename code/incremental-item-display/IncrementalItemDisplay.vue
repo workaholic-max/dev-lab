@@ -4,7 +4,7 @@ import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue';
 import type { ClassName } from '../shared-types/types.ts';
 
 // ───────────────────────────────────────────────────────
-// Props
+// Component API
 // ───────────────────────────────────────────────────────
 
 const {
