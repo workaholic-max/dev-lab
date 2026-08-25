@@ -2,6 +2,10 @@
 
 A public record of the code worth keeping and the practices behind it — not a CV, that's what my [portfolio's](https://workaholic-max.github.io/portfolio/) for. This is closer to a lab notebook: real pieces of code pulled out of my TypeScript projects — Vue 3 by default where a framework's involved — documented with the actual reasoning and trade-offs, plus the Claude Code toolkit I use to build all of it efficiently.
 
+## Reference Implementation
+
+The [Architecture](https://github.com/workaholic-max/architecture) repository applies selected Dev Lab practices in a runnable Vue 3 application architecture, with documented boundaries, development guides, tests, and CI. Use it to see how these ideas fit together in a complete project.
+
 ## Structure
 
 - **[`code/`](code)** — real code worth keeping, one folder per entry. Not everything here is an architectural "pattern" — some entries are algorithms, some are animation techniques, some are just a convention worth writing down. The bar for an entry isn't "is this a pattern," it's "would I want to explain this to someone in six months." See each entry's own `README.md` for the deep dive.
