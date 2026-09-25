@@ -1,4 +1,5 @@
 ---
+name: debug-runtime-issue
 description: Systematically reproduce and fix a runtime bug (broken UI behavior, console error, incorrect state) using evidence from the browser rather than guessing. Use when asked to fix a bug, investigate unexpected behavior, or chase a reported issue.
 ---
 

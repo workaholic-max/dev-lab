@@ -1,4 +1,5 @@
 ---
+name: migrate-codebase
 description: Plan and execute a mechanical migration across many files (Options API to Composition API, Vuex to Pinia, JS to TS, one library to another). Use when asked to migrate, convert, or batch-update a pattern across the codebase.
 disable-model-invocation: true
 ---

@@ -1,4 +1,5 @@
 ---
+name: pre-pr-review
 description: Run an adversarial review of your own diff before opening a PR, using a fresh-context pass so it isn't biased by the reasoning that produced the change. Use before opening any non-trivial PR.
 ---
 

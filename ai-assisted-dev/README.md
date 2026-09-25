@@ -11,6 +11,7 @@ Each folder under `skills/` is a self-contained workflow Claude Code can run aut
 | Skill                   | Covers                                                                                                                |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | `accessibility-audit`   | Keyboard, screen-reader, contrast, and focus review with concrete fixes                                               |
+| `choose-library`        | Compare candidate packages for a UI/utility need (chart, calendar, editor) and recommend one with real trade-offs, before installing anything |
 | `api-integration`       | Wiring a new backend endpoint with proper loading/error/success handling                                              |
 | `debug-runtime-issue`   | Reproduce and fix a bug from real evidence, not guesses                                                               |
 | `dependency-audit`      | Vulnerability audit with safe fixes applied, risky bumps flagged not auto-applied, verified functionally and visually |

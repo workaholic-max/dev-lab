@@ -1,4 +1,5 @@
 ---
+name: spec-from-idea
 description: Turn a vague feature idea into a concrete written spec before any code is written, by having Claude interview you about the hard parts. Use at the start of any feature that's more than a small, obvious change.
 ---
 

@@ -1,4 +1,5 @@
 ---
+name: refactor-component
 description: Safely restructure existing code (extract a composable, split a large component, rename for clarity) while preserving behavior exactly. Use when asked to refactor, clean up, extract, or simplify existing code without changing what it does.
 ---
 

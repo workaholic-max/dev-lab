@@ -1,4 +1,5 @@
 ---
+name: api-integration
 description: Wire a new backend endpoint into the app following the project's existing api layer conventions (types, error handling, loading state). Use when asked to connect to a new API endpoint, fetch data from the backend, or add an API call.
 ---
 

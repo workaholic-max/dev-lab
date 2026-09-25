@@ -1,4 +1,5 @@
 ---
+name: accessibility-audit
 description: Review and fix accessibility issues (keyboard navigation, screen reader support, contrast, focus management) in a component or flow. Use when asked to check, improve, or fix accessibility/a11y.
 ---
 

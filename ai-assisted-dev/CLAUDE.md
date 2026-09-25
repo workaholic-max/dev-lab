@@ -12,5 +12,7 @@
 - Before opening a PR on anything non-trivial, run the `pre-pr-review` skill first.
 - When implementing a UI from a design or screenshot, close the loop with an actual screenshot comparison — see `implement-design`.
 - When resolving TypeScript errors, never silence them with `any` / `@ts-ignore` without saying so explicitly — see `fix-typescript-errors`.
+- When a feature needs a capability the project doesn't have yet (a chart, a calendar, a rich-text editor) and no package has been picked, compare real candidates first — see `choose-library` — before wiring anything in with `integrate-library`.
 - When adding a new third-party library, check for an existing one that already does the job first, and follow the project's existing wrapper pattern — see `integrate-library`.
 - When fixing dependency vulnerabilities or updating packages, don't blindly apply audit-fix — verify nothing broke functionally or visually first — see `dependency-audit`.
+- "Chrome integration", wherever a skill mentions it, means Claude Code's Chrome DevTools connection (`/chrome` or `claude --chrome`) — connect it before running a skill that verifies visually: `accessibility-audit`, `implement-design`, `debug-runtime-issue`, `dependency-audit`, `integrate-library`, `performance-audit`, `web-vitals`.

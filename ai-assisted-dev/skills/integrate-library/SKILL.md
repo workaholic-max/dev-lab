@@ -1,12 +1,13 @@
 ---
-description: Add and wire up a new third-party library (e.g. chart.js, a date library, an animation library) following the project's existing conventions for wrapping external dependencies. Use when asked to add, install, or integrate a new package.
+name: integrate-library
+description: Add and wire up a new third-party library (e.g. chart.js, a date library, an animation library) following the project's existing conventions for wrapping external dependencies. Use when asked to add, install, or integrate a new package that's already been chosen. Use `choose-library` first when the package itself isn't decided yet.
 ---
 
 # Integrate a new library
 
 Use for requests like "add chart.js and show a line chart of X" or "integrate <library>".
 
-1. **Check whether something already covers this.** Search `package.json` and existing components for a library that already does the job before adding a new dependency — avoid ending up with two charting libraries in one project.
+1. **Check whether something already covers this.** Search `package.json` and existing components for a library that already does the job before adding a new dependency — avoid ending up with two charting libraries in one project. If nothing does and the choice between real candidates hasn't been made yet, run `choose-library` first — this skill starts from a package that's already decided.
 2. **Check the project's convention for wrapping third-party UI libraries.** Look for an existing example — how a date-picker or a component-library widget is wrapped: usually a thin component that owns the library's config so the rest of the app never imports the library directly. Follow that pattern; if none exists yet, propose the simplest wrapper and say so explicitly.
 3. **Install with the project's package manager** (check CLAUDE.md), pinned consistently with how other dependencies in the project are pinned.
 4. **Get the types right first.** Check whether the library ships its own TypeScript types or needs `@types/<lib>`. Read the actual types before writing usage code — library APIs drift between versions, don't reconstruct the API from memory.

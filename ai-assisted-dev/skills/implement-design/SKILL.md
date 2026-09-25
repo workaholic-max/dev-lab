@@ -1,4 +1,5 @@
 ---
+name: implement-design
 description: Implement a UI from a design reference (Figma export, screenshot, or mockup) and verify the result against it via a browser screenshot comparison. Use when asked to build, match, or clean up a design, mockup, or Figma frame.
 ---
 

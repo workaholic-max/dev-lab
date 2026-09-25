@@ -1,4 +1,5 @@
 ---
+name: write-tests
 description: Generate test coverage that follows the project's existing testing conventions and actually tests behavior, not implementation details. Use when asked to add tests, improve coverage, or test a specific component/composable/store.
 ---
 

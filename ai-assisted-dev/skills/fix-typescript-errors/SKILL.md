@@ -1,4 +1,5 @@
 ---
+name: fix-typescript-errors
 description: Systematically resolve TypeScript compiler errors without weakening the type system. Use when asked to fix type errors, resolve a failing typecheck, or clean up any/ts-ignore usage.
 ---
 

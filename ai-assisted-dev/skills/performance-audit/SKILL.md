@@ -1,5 +1,6 @@
 ---
-description: Investigate and fix a performance problem (slow render, large bundle, unnecessary re-renders, memory growth) with measured before/after evidence. Use when asked to speed something up, reduce bundle size, or fix jank/lag.
+name: performance-audit
+description: Investigate and fix a performance problem (slow render, large bundle, unnecessary re-renders, memory growth) with measured before/after evidence. Use when asked to speed something up, reduce bundle size, or fix jank/lag. Use `web-vitals` instead when the actual concern is Core Web Vitals (LCP/INP/CLS, Lighthouse, CrUX, Search Console).
 ---
 
 # Performance audit

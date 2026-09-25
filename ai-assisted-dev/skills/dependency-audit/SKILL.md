@@ -1,4 +1,5 @@
 ---
+name: dependency-audit
 description: Run a dependency vulnerability audit, apply only the fixes that are actually safe, and verify nothing broke functionally or visually. Use when asked to run an audit, fix vulnerabilities, or update dependencies for security reasons.
 ---
 
